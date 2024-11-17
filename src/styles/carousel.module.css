@@ -1,0 +1,101 @@
+.carouselContainer {
+  position: relative;
+  width: 23rem;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: rgb(235, 228, 252);
+  cursor: pointer;
+}
+
+.carouselImages {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carouselSlide {
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
+}
+
+.carouselImage {
+  margin-top: 1rem;
+  margin-left: 3rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+}
+
+.textOverlay {
+  position: absolute;
+  bottom: 12px;
+  left: 100px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prevButton {
+  left: 10px;
+}
+
+.nextButton {
+  right: 10px;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: black;
+}
+
+@media (max-width: 580px) {
+  .carouselContainer {
+    width: 17rem;
+  }
+  .textOverlay {
+    font-size: 0.8rem;
+    left: 74px;
+    top: 6px;
+  }
+
+  .carouselImage {
+    margin-top: 0.7rem;
+    margin-left: 2.5rem;
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+  }
+}
